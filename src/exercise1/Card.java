@@ -8,7 +8,7 @@ package exercise1;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author dancye
- * @author Paul Bonenfant May 2020
+ * @author Juliean Do January 31, 2023
  */
 public class Card {
 
@@ -19,7 +19,7 @@ public class Card {
     /**
      * @return the suit
      */
-    public String getSuit() {
+    public String getSuit(String par) {
         return suit;
     }
 
@@ -33,7 +33,7 @@ public class Card {
     /**
      * @return the value
      */
-    public int getValue() {
+    public int getValue(int par) {
         return value;
     }
 
