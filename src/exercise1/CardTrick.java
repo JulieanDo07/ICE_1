@@ -66,7 +66,7 @@ public class CardTrick {
      */
     private static void printInfo() {
     
-        System.out.println("Congratulations, you guessed right!");
+        System.out.println("I'm done!");
         System.out.println();
         
         System.out.println("My name is Paul, but you can call me prof, Paul or sir");
