@@ -66,7 +66,7 @@ public class CardTrick {
      */
     private static void printInfo() {
     
-        System.out.println("I'm done!");
+        System.out.println("I'm done");
         System.out.println();
         
         System.out.println("My name is Juliean Do, but you can call me Juliean");
