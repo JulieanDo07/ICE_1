@@ -16,44 +16,54 @@ public class CardTrick {
     
     public static void main(String[] args) {
         
-        Card[] hand = new Card[7];
-        Card card = new Card();
+        //array of cards 
+        Card[] hand = new Card[7]; 
         
-
-        for (int i = 0; i < hand.length; i++) {
-           
-            //card.setValue(insert call to random number generator here)
-            card.getValue((int)(Math.random() * 13 + 1));
-            card.getSuit(Card.SUITS[(int)(Math.random())]);
-
-            //card.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            // Hint: You can use Random -> random.nextInt(n) to get a random number between 0 and n-1 (inclusive)
-            //       Don't worry about duplicates at this point
+        //loop through cards in hand array 
+        for(int i = 0; i < hand.length; i++) {
+            //set hand to card --> hand have cards 
+            hand[i] = new Card();
+            //make random numbers+suit with card in hand 
+            hand[i].setValue((int)(Math.random() * 12 + 1));
+            hand[i].setSuit(Card.SUITS[(int)(Math.random()* 4)]);
+            System.out.println(hand[i].getValue(0) + hand[i].getSuit(""));
+        }
+        
+        //card.setValue((int)(Math.random() * 12 + 1));
+       // card.setSuit(Card.SUITS[(int)(Math.random()* 4)]);
             
-                    // insert code to ask the user for Card value and suit, create their card
+       // System.out.println(card.getValue(0) + card.getSuit("word"));
+
+        //card.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+        // Hint: You can use Random -> random.nextInt(n) to get a random number between 0 and n-1 (inclusive)
+        //       Don't worry about duplicates at this point
+            
+        // insert code to ask the user for Card value and suit, create their card
         // and search the hand here. 
         Scanner input = new Scanner(System.in); 
-        System.out.println("Enter and card value:");
+        System.out.println("Enter a card value:");
         int cardPut = input.nextInt(); 
         
         System.out.println("Enter card suit: ");
         int cardPutSuit = input.nextInt(); 
+        String cardStr = Card.SUITS[cardPutSuit];
         
 
-        for (int i = 0; i < hand.length; i++){
-            if(cardPut == card.getValue() && cardPutSuit == card.getSuit){
-            System.out.println(" Your card is a match!");
+        for(int i = 0; i < hand.length; i++){
+            if(cardPut == hand[i].getValue(0) && cardStr == hand[i].getSuit("")){
+                System.out.println(" Your card is a match!");
             }
             else {
-            System.out.println("Your card is not a match");
+                System.out.println("Your card is not a match");
         
             }
         }
         
-
-
+       
             
+    
     }
+}
         
         // If the guess is successful, invoke the printInfo() method below.
         
@@ -64,7 +74,7 @@ public class CardTrick {
      * replace this information with your own.
      * @author Juliean DO Jan 31, 2023
      */
-    private static void printInfo() {
+    /*private static void printInfo() {
     
         System.out.println("I'm done");
         System.out.println();
@@ -90,3 +100,4 @@ public class CardTrick {
     }
 
 }
+*/
